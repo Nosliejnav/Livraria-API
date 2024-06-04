@@ -12,8 +12,8 @@ public class LivroService {
     @Autowired
     private LivroRepository repository;
     
-    public void create(Livro obj){
-        repository.save(obj);
+    public Livro create(Livro obj){
+       return repository.save(obj);
     }
     
     public void delete(Long id){
