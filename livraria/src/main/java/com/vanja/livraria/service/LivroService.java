@@ -12,7 +12,7 @@ public class LivroService {
     @Autowired
     private LivroRepository repository;
     
-    public void create(livro obj){
+    public void create(Livro obj){
         repository.save(obj);
     }
     
