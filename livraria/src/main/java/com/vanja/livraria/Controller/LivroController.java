@@ -1,4 +1,4 @@
-package com.vanja.livraria;
+package com.vanja.livraria.Controller;
 
 import com.vanja.livraria.entity.Livro;
 import com.vanja.livraria.service.LivroService;
