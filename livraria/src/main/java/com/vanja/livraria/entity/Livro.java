@@ -17,7 +17,8 @@ public class Livro implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-   //private Autor autorr;
 
-
+    @ManyToOne
+    @JoinColumn(name = "autor_id")
+   private Autor autor;
 }
