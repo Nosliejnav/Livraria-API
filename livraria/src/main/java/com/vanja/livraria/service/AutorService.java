@@ -2,6 +2,7 @@ package com.vanja.livraria.service;
 
 import com.vanja.livraria.entity.Autor;
 import com.vanja.livraria.repository.AutorRepository;
+import com.vanja.livraria.service.exception.EntityNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,9 @@ public class AutorService {
     
     public Autor getId(Long id){
         Optional<Autor> obj = repository.findById(id);
+        if (obj.isEmpty()){
+            throw new EntityNotFound("Autor de ID: "+id+" não encontrado!");
+        }
         return obj.get();
     }
     
@@ -32,6 +36,9 @@ public class AutorService {
     
     public Autor update(Autor obj){
         Optional<Autor> newObj = repository.findById(obj.getId());
+        if (newObj.isEmpty()){
+            throw new EntityNotFound("Autor de ID: "+obj.getId()+" não encontrado!");
+        }
         updateAutor(newObj, obj);
         return repository.save(newObj.get());
 
