@@ -18,7 +18,7 @@ OBS: Se estiver pelo VScode, instale a extensão do Spring Boot
 ## Diagrama do Projeto
 
 <p align="center">
-    <img src="src/main/resources/assets/diagrama-uml-livraria.png">
+    <img src="https://github.com/Nosliejnav/Livraria-API/blob/main/livraria/src/main/resources/assets/diagrama-uml-livraria.png">
 </p>
 
 ## Algumas Funcionalidades da API
